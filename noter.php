@@ -16,7 +16,7 @@ if ($Nlignes > 0){
     exit();
 }
 
-mysqli_query($conn,"insert into commentaire(commentateur,user,comment) values ($user,$test,'$comment');");
+mysqli_query($conn,"insert into commentaire(commentateur,user,comment,valeur) values ($user,$test,'$comment',$note);");
 mysqli_query($conn,"update users set Somme_note=Somme_note+$note, Nombre_com=Nombre_com+1 where UserId=$test;");
 //update users set Somme_note=Somme_note+4, Nombre_com=Nombre_com+1 where UserId=8;
 echo "<script>alert(\"$Votre commentaire a été reçu\"); </script>";
